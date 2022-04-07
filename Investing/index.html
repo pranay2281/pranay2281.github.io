@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		 <script src="https://d3js.org/d3.v3.min.js"></script>
+		 <script src="https://d3js.org/d3.v4.js"></script>
 
 	</head>
 	<body class="is-preload">
@@ -20,6 +21,7 @@
 			<header id="header">
 				<div class="content">
 					<h1><a href="#">Investing</a></h1>
+					<h2><a href="Alpha_Release.pdf">Alpha Release</a></h2>
 					<p>&ensp;Just a simple page to encourage today's generation 
 						to invest in the stock market.
 					</p>
@@ -57,12 +59,13 @@
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><img src="images/pic02.jpg" alt="" /></div>
+						<div id="boxplot"></div>
 						<div class="content">
 							<h3>Ultrices nullam aliquam</h3>
 							<p>Morbi mattis ornare ornare. Duis quam turpis, gravida at leo elementum elit fusce accumsan dui libero, quis vehicula lectus ultricies eu. In convallis amet leo non sapien iaculis efficitur consequat lorem ipsum.</p>
 						</div>
 					</section>
+					<img src="images/pie_chart.jpg" width="400" height="450">
 					<section class="spotlight">
 						<div class="image"><img src="images/pic03.jpg" alt="" /></div>
 						<div class="content">
@@ -442,5 +445,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="drawings/isotype.js"></script>
+			<script src="drawings/boxplot.js"></script>
+
 
 </html>
