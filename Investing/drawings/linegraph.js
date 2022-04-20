@@ -1,7 +1,7 @@
 //set the dimensions and margins of the graph
 var margin = {top:10, right: 30, bottom: 30, left: 60},
     width = 600 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    height = 440 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg_line = d3.select("#linechart")
@@ -10,7 +10,7 @@ var svg_line = d3.select("#linechart")
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+        "translate(" + margin.left + "," + (margin.top-25) + ")");
 
 //Read the data
 d3.csv("https://gist.githubusercontent.com/pranay2281/27c033e807b492d87da86989c4760102/raw/e2e35589da6b708cfa936ce7cbb65d20e48814c2/line.csv",
