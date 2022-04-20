@@ -3,8 +3,9 @@
     var margin = {top: 10, right: 30, bottom: 50, left: 70},
     width = 500 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
+
     //append the svg object to the body of the page
-    var svg = d3.select("#boxplot")
+    var svg_box = d3.select("#boxplot")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -34,9 +35,9 @@
     .range([ height, 0 ])
     .domain(["Apple", "Bitcoin"])
     .padding(.6)
-    svg.append("g")
+    svg_box.append("g")
     .call(d3.axisLeft(y).tickSize(0))
-
+    .attr("font-size","14px")
     .select(".domain").remove()
 
     // Show the X scale
@@ -47,16 +48,16 @@
         return +d.change+0.2;
     })])
     .range([0, width])
-    svg.append("g")
+    svg_box.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).ticks(10))
     //.select(".domain").remove()
 
     // Color scale
-    var myColor = d3.scaleLinear().range(["#b02e2e","white","#00ff26"])
-
+    //var myColor = d3.scaleLinear().range(["#ff0000","white","#00ff26"])
+    var myColor = d3.scaleLinear().range(["#ED0800","white","#45E00B"])
     // Add X axis label:
-    svg.append("text")
+    svg_box.append("text")
     .attr("text-anchor", "end")
     .attr("x", width)
     .attr("y", height + margin.top + 30)
@@ -68,7 +69,7 @@
         return +d.change+0.2;
     })])
     // Show the main vertical line
-    svg
+    svg_box
     .selectAll("vertLines")
     .data(sumstat)
     .enter()
@@ -81,7 +82,7 @@
     .style("width", 40)
 
     // rectangle for the main box
-    svg
+    svg_box
     .selectAll("boxes")
     .data(sumstat)
     .enter()
@@ -95,7 +96,7 @@
     .style("opacity", 0.3)
 
     // Show the median
-    svg
+    svg_box
     .selectAll("medianLines")
     .data(sumstat)
     .enter()
@@ -107,13 +108,14 @@
     .attr("stroke", "red")
     .attr("stroke-width",2)
     .style("width", 80)
-    /**
+
     // create a tooltip
     var tooltip = d3.select("#boxplot")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
     .style("font-size", "16px")
+
     // Three function that change the tooltip when user hover / move / leave a cell
     var mouseover = function(d) {
     tooltip
@@ -136,11 +138,11 @@
     .duration(200)
     .style("opacity", 0)
 }
-     **/
+
 
     // Add individual points with jitter
     var jitterWidth = 50
-    svg
+    svg_box
     .selectAll("indPoints")
     .data(data)
     .enter()
@@ -150,9 +152,9 @@
     .attr("r",2.5)
     .style("fill", function(d){ return(myColor(+d.change)) })
     .attr("stroke", "black")
-    //.on("mouseover", mouseover)
-    //.on("mousemove", mousemove)
-   // .on("mouseleave", mouseleave)
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
 
 
 })

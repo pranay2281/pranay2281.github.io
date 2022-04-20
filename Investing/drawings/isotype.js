@@ -2,7 +2,8 @@
 //d3.select("body").append("div").attr("id","sliderDiv");
 
 //create svg element
-var svgisotype=d3.select("#isotype").append("svg").attr("viewBox",[0,0,100,100]).attr("width",400).attr("height",400);
+var svgisotype=d3.select("#isotype").append("svg")
+    .attr("viewBox",[0,0,100,100]).attr("width",400).attr("height",400);
 
 //define an icon store it in svg <defs> elements as a reusable component - this geometry can be generated from Inkscape, Illustrator or similar
 svgisotype.append("defs")
