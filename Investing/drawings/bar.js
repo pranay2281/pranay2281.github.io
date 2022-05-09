@@ -2,7 +2,7 @@
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 30, bottom: 90, left: 40},
     width = 500 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 550 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg_bar = d3.select("#barchart")

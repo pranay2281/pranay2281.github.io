@@ -1,7 +1,7 @@
 //set the dimensions and margins of the graph
 var margin = {top:10, right: 30, bottom: 30, left: 60},
     width = 600 - margin.left - margin.right,
-    height = 440 - margin.top - margin.bottom;
+    height = 460 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg_line = d3.select("#linechart")
@@ -58,7 +58,7 @@ function transition(path){
     path.transition()
         .duration(6000)
         .attrTween("stroke-dasharray",tweenDash)
-    //.on("end",d3.call(transition));
+    //on("end",d3.call(transition));
 }
 
 function tweenDash() {
@@ -114,16 +114,18 @@ sleep(2500).then(()=>{
         .attr('fill', 'none');
 })
 
+**/
+
 //3000
 sleep(3000).then(()=>{
     svg_line.append("text")
-        .attr("x",210)
-        .attr("y",200)
+        .attr("x",185)
+        .attr("y",240)
         .attr("font-family","times")
         .attr("font-size","12px")
         .text("Mortgage and Housing Crisis")
 
-    var datahousing = [{x: 300, y: 270}, {x: 305,y: 255},{x:310, y:245},{x:315,y:235},{x:309,y:225},{x:304,y:217},{x: 300, y: 210}]
+    var datahousing = [{x: 266, y: 330},{x:262, y:260}]
 
     var curveFunc = d3.line()
         .curve(d3.curveBasis)
@@ -137,18 +139,17 @@ sleep(3000).then(()=>{
         .attr('fill', 'none');
 })
 
-**/
 
 //4000
 sleep(4000).then(()=>{
     svg_line.append("text")
-        .attr("x",420)
-        .attr("y",220)
+        .attr("x",440)
+        .attr("y",225)
         .attr("font-family","times")
         .attr("font-size","12px")
-        .text("Coronavirus Pandemic")
+        .text("Coronavirus")
 
-    var datacovid = [{x: 410, y: 195}, {x: 448, y: 210}]
+    var datacovid = [{x: 428, y: 199}, {x: 448, y: 210}]
 
     var curveFunc = d3.line()
         .curve(d3.curveBasis)

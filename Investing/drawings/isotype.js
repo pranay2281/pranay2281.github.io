@@ -31,15 +31,6 @@ var wBuffer = 8;
 //generate a d3 range for the total number of required elements
 var myIndex=d3.range(numCols*numRows);
 
-//text element to display number of icons highlighted
-
-svgisotype.append("text")
-    .attr("id","txtValue")
-    .attr("x",xPadding)
-    .attr("y",yPadding)
-    .attr("dy",-3)
-    .text("8");
-
 //create group element and create an svg <use> element for each icon
 svgisotype.append("g")
     .attr("id","pictoLayer")

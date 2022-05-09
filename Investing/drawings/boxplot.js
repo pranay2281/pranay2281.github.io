@@ -56,12 +56,6 @@
     // Color scale
     //var myColor = d3.scaleLinear().range(["#ff0000","white","#00ff26"])
     var myColor = d3.scaleLinear().range(["#ED0800","white","#45E00B"])
-    // Add X axis label:
-    svg_box.append("text")
-    .attr("text-anchor", "end")
-    .attr("x", width)
-    .attr("y", height + margin.top + 30)
-    .text("Change");
 
     myColor.domain([d3.min(data,function (d){
         return +d.change-0.2;

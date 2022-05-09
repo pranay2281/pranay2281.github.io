@@ -1,6 +1,6 @@
  // set the dimensions and margins of the graph
     var margin = {top: 30, right: 50, bottom: 10, left: 50},
-    width = 500 - margin.left - margin.right,
+    width = 600 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
@@ -116,4 +116,73 @@
     .text(function(d) { return d; })
     .style("fill", "black")
 
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",7)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Apple")
+
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",102)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Microsoft")  
+
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",285)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Tesla") 
+
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",198)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Amazon")  
+
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",173)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Google") 
+
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",355)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Meta")
+
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",410)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Alibaba")  
+
+     svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",430)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Netflix")   
+
+     svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",441)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Shopify")                                   
+
+    svg_parallel.append("text")
+        .attr("x",455)
+        .attr("y",453)
+        .attr("font-family","times")
+        .attr("font-size","12px")
+        .text("Seaboard") 
 })
