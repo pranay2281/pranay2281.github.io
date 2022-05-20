@@ -15,8 +15,8 @@ After conducting a survey, it was seen that only 8 out of a 100 people invest in
 
 ## Table of Contents
 
-- [Objectives](#Objectives)
-- [Link to website](#link)
+- [Objectives](#project-Objectives)
+- [Link to website](#link-to-website)
 - [Rebuild Instructions](#rebuild-instructions)
 - [Libraries](#Libraries)
 - [Interaction](#Interaction)
@@ -48,13 +48,14 @@ After conducting a survey, it was seen that only 8 out of a 100 people invest in
 + [D3 Version 4](https://d3js.org/)
 + [D3 Version 6](https://d3js.org/) 
 
-##Interaction
 
-###Box Plot
+## Interaction
+
+### Box Plot
 ##### Hover over the data points (displayed below the box plot) to see the values of each point.
 
-###Line Chart
+### Line Chart
 ##### Refresh the page after reaching the line chart to load its animation and annotation over the graph and stay on for `6s`. The total length of the animation is `6s`.
 
-###Parallel Coordinates
-#### Hover over the lines for `0.3s` to change the color of the connecting lines between the share price and the market cap.
+### Parallel Coordinates
+##### Hover over the lines for `0.3s` to change the color of the connecting lines between the share price and the market cap.
