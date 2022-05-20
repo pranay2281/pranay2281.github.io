@@ -34,7 +34,7 @@
     .range([0, width])
     .domain(dimensions);
     
-    // Highlight the specie that is hovered
+    // Highlight the specie/company that is hovered
     var highlight = function(d){
 
     selected_specie = d.Company
@@ -44,12 +44,14 @@
     .transition().duration(1000)
     .style("stroke", "lightgrey")
     .style("opacity", "0.5")
-    // Second the hovered specie takes its color
+    // Second the hovered specie/company takes its color
     d3.selectAll("." + selected_specie)
     .transition().duration(200)
     .style("stroke", "orange")
     .style("opacity", "1")
 }
+
+//trying to display name while hovering but it did not work
 
     var displayname= function (d){
 
@@ -101,6 +103,7 @@
 
     // Draw the axis:
     svg_parallel.selectAll("myAxis")
+
     // For each dimension of the dataset I add a 'g' element:
     .data(dimensions).enter()
     .append("g")
@@ -115,6 +118,8 @@
     .attr("y", -9)
     .text(function(d) { return d; })
     .style("fill", "black")
+
+//manually added all the names of the company as tooltip did not work
 
     svg_parallel.append("text")
         .attr("x",455)

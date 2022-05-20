@@ -54,6 +54,8 @@ d3.csv("https://gist.githubusercontent.com/pranay2281/27c033e807b492d87da86989c4
 
     })
 
+// animation duration
+
 function transition(path){
     path.transition()
         .duration(6000)
@@ -115,6 +117,7 @@ sleep(2500).then(()=>{
 })
 
 **/
+//annotation delay 
 
 //3000
 sleep(3000).then(()=>{
@@ -141,6 +144,7 @@ sleep(3000).then(()=>{
 
 
 //4000
+
 sleep(4000).then(()=>{
     svg_line.append("text")
         .attr("x",440)

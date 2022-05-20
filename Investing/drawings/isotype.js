@@ -1,5 +1,3 @@
-//placeholder div for jquery slider
-//d3.select("body").append("div").attr("id","sliderDiv");
 
 //create svg element
 var svgisotype=d3.select("#isotype").append("svg")
