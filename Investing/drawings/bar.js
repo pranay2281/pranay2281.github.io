@@ -24,7 +24,7 @@
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x))
     .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(0)")
+    .attr("transform", "translate(8,0)rotate(0)")
     .style("text-anchor", "end");
 
     // Y axis
