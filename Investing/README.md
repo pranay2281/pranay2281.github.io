@@ -1,4 +1,4 @@
-#Investing 📈️
+# Investing 📈️
 
 With current rates of inflation being ~7.5%, the purchasing power of the US $ is decreasing day by day. The solution to this is investing in the stock market.
 
